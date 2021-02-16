@@ -1,9 +1,10 @@
 GET http://localhost:3000/books
-Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lT2Z1c2VyIjoidGVzdCIsImlhdCI6MTYxMzQ5MTMyM30.NBadA0UE-EPv4QK00Q6CcxoWg41qfsHrnPSqEMV2Gj8
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lT2Z1c2VyIjoibmFvdWZhbCIsImlhdCI6MTYxMzUwMTIwMn0.VDMJ5zkvfCFvoI9ZnBpAZZDNXU0nf2NN7QxKvm8Lr9E
 
 ###
 
 POST http://localhost:3000/books
+Authorization: bearer 
 Content-Type: application/json
 
 {
@@ -14,7 +15,7 @@ Content-Type: application/json
 
 ###
 GET http://localhost:3000/users 
-Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lT2Z1c2VyIjoidGVzdCIsImlhdCI6MTYxMzQ5MTMyM30.NBadA0UE-EPv4QK00Q6CcxoWg41qfsHrnPSqEMV2Gj8
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lT2Z1c2VyIjoibmFvdWZhbCIsImlhdCI6MTYxMzUwMTIwMn0.VDMJ5zkvfCFvoI9ZnBpAZZDNXU0nf2NN7QxKvm8Lr9E
 
 ###
 
@@ -32,5 +33,5 @@ POST http://localhost:3000/login
 Content-Type: application/json
 
 {
-    "name" : "test"
+    "name" : "naoufal"
 }

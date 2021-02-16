@@ -3,6 +3,7 @@ const jwt = require('jsonwebtoken')
 const express = require('express')
 const router = express.Router()
 const Books = require('../models/books')
+const authToken = require('../middleware/auth')
 
 
 // get All 
@@ -16,7 +17,7 @@ router.get('/', authToken, async (req, res) => {
 })
 
 // add One
-router.post('/', async (req, res) => {
+router.post('/', authToken, async (req, res) => {
 
     const book = new Books({
         name : req.body.name,
@@ -31,25 +32,6 @@ router.post('/', async (req, res) => {
         res.json({message : error.message})
     }
 })
-
-
-// authToken function 
-function authToken (req, res, next) {
-    const autHeader = req.headers['authorization']
-    const token = autHeader && autHeader.split(' ')[1]
-
-    if(token == null){
-        return res.sendStatus(403)
-    }
-
-    jwt.verify(token, process.env.ACCESS_TOKEN, (err, user) => {
-        if(err) {
-            return res.sendStatus(403)
-        }
-        req.user = user
-        next()
-    })
-}
 
 
 module.exports = router

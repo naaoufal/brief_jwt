@@ -21,7 +21,6 @@ app.use(express.json())
 app.post('/login', (req, res) => {
 
   const name = req.body.name
-  //const pass = req.body.password
   const user = {nameOfuser : name}
 
   const accessToken = jwt.sign(user, process.env.ACCESS_TOKEN)

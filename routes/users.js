@@ -3,6 +3,7 @@ const jwt = require('jsonwebtoken')
 const express = require('express')
 const router = express.Router()
 const Users = require('../models/users')
+const authToken = require('../middleware/auth')
 
 
 // get All 
@@ -33,23 +34,7 @@ router.post('/', async (req, res) => {
 })
 
 
-// authToken function 
-function authToken (req, res, next) {
-    const autHeader = req.headers['authorization']
-    const token = autHeader && autHeader.split(' ')[1]
 
-    if(token == null){
-        return res.sendStatus(403)
-    }
-
-    jwt.verify(token, process.env.ACCESS_TOKEN, (err, user) => {
-        if(err) {
-            return res.sendStatus(403)
-        }
-        req.user = user
-        next()
-    })
-}
 
 
 module.exports = router
