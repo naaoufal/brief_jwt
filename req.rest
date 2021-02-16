@@ -1,0 +1,36 @@
+GET http://localhost:3000/books
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lT2Z1c2VyIjoidGVzdCIsImlhdCI6MTYxMzQ5MTMyM30.NBadA0UE-EPv4QK00Q6CcxoWg41qfsHrnPSqEMV2Gj8
+
+###
+
+POST http://localhost:3000/books
+Content-Type: application/json
+
+{
+    "name" : "book1",
+    "author" : "naoufal",
+    "price" : 120
+}
+
+###
+GET http://localhost:3000/users 
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lT2Z1c2VyIjoidGVzdCIsImlhdCI6MTYxMzQ5MTMyM30.NBadA0UE-EPv4QK00Q6CcxoWg41qfsHrnPSqEMV2Gj8
+
+###
+
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+    "name" : "user1",
+    "phone" : "0614675855",
+    "password" : "qwrty"
+}
+
+###
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+    "name" : "test"
+}
