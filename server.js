@@ -17,16 +17,6 @@ db.once("open", () => console.log("Connected to DataBase !!!"))
 
 app.use(express.json())
 
-// login route
-app.post('/login', (req, res) => {
-
-  const name = req.body.name
-  const user = {nameOfuser : name}
-
-  const accessToken = jwt.sign(user, process.env.ACCESS_TOKEN)
-  res.json({accessToken : accessToken})
-
-})
 
 
 // use routes

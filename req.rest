@@ -1,35 +1,34 @@
 GET http://localhost:3000/books
-Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lT2Z1c2VyIjoibmFvdWZhbCIsImlhdCI6MTYxMzUwMTIwMn0.VDMJ5zkvfCFvoI9ZnBpAZZDNXU0nf2NN7QxKvm8Lr9E
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lT2Z1c2VyIjoibmFvdWZhbCIsImlhdCI6MTYxMzc2NDU1NX0.iY2CPZaagugK1jnIMdyNisnBXfuOx4ExZSU36eQWviQ
 
 ###
 
-POST http://localhost:3000/books
-Authorization: bearer 
-Content-Type: application/json
+# POST http://localhost:3000/books
+# Authorization: bearer 
+# Content-Type: application/json
 
-{
-    "name" : "book1",
-    "author" : "naoufal",
-    "price" : 120
-}
-
-###
-GET http://localhost:3000/users 
-Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lT2Z1c2VyIjoibmFvdWZhbCIsImlhdCI6MTYxMzUwMTIwMn0.VDMJ5zkvfCFvoI9ZnBpAZZDNXU0nf2NN7QxKvm8Lr9E
+# {
+#     "name" : "book1",
+#     "author" : "naoufal",
+#     "price" : 120
+# }
 
 ###
+GET http://localhost:3000/users/all
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lT2Z1c2VyIjoibmFvdWZhbCIsImlhdCI6MTYxMzc2NDU1NX0.iY2CPZaagugK1jnIMdyNisnBXfuOx4ExZSU36eQWviQ
+###
 
-POST http://localhost:3000/users
-Content-Type: application/json
+# POST http://localhost:3000/users
+# Content-Type: application/json
 
-{
-    "name" : "user1",
-    "phone" : "0614675855",
-    "password" : "qwrty"
-}
+# {
+#     "name" : "user1",
+#     "phone" : "0614675855",
+#     "password" : "qwrty"
+# }
 
 ###
-POST http://localhost:3000/login
+POST http://localhost:3000/users/login
 Content-Type: application/json
 
 {

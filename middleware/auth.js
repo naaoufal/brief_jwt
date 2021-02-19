@@ -3,7 +3,7 @@ const jwt = require('jsonwebtoken')
 
 // authToken function mdileware funntion
 
-module.exports = function authToken (req, res, next) {
+module.exports = (req, res, next) => {
     const autHeader = req.headers['authorization']
     const token = autHeader && autHeader.split(' ')[1]
   
